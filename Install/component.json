@@ -1,0 +1,78 @@
+{
+	"name" : "ETF Categories",
+	"route" : "etf/categories",
+	"description" : "<p>ETF Categories</p>",
+	"module_type" : "components",
+	"app_type" : "fintech",
+	"category" : "etf",
+	"version" : "0.0.0",
+	"repo" : "https://github.com/sp-fintech-auetfs/fintech-components-etf-etfcategories",
+	"class" : "Apps\\Fintech\\Components\\Etf\\Categories\\CategoriesComponent",
+	"dependencies" : 
+	{
+		"core" : 
+		{
+			"name" : "Core",
+			"version" : "0.0.0-rc.11",
+			"repo" : "https://github.com/sp-framework/core"
+		},
+		"apptype" : 
+		{
+			"name" : "Fintech",
+			"version" : "0.3.0",
+			"repo" : "https://github.com/sp-fintech/fintech"
+		},
+		"packages" : 
+		[
+			{
+				"name" : "EtfCategories",
+				"version" : "0.0.0",
+				"repo" : "https://github.com/sp-fintech-auetfs/fintech-packages-etf-etfcategories"
+			}
+		],
+		"middlewares" : [],
+		"views" : 
+		[
+			{
+				"name" : "EtfCategories",
+				"version" : "0.0.0",
+				"repo" : "https://github.com/sp-fintech-auetfs/fintech-views-etf-default-etfcategories"
+			}
+		],
+		"externals" : 
+		{
+			"composer" : 
+			{
+				"require" : []
+			},
+			"config" : 
+			{
+				"allow-plugins" : []
+			},
+			"extra" : 
+			{
+				"patches" : []
+			}
+		}
+	},
+	"menu" : 
+	{
+		"etf" : 
+		{
+			"title" : "etf",
+			"icon" : "file-invoice-dollar",
+			"childs" : 
+			{
+				"categories" : 
+				{
+					"title" : "categories",
+					"icon" : "circle-dot",
+					"link" : "etf/categories"
+				}
+			}
+		},
+		"seq" : "0"
+	},
+	"settings" : [],
+	"widgets" : []
+}
