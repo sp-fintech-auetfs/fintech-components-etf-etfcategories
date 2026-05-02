@@ -189,15 +189,15 @@ class CategoriesComponent extends BaseComponent
     {
         $this->requestIsPost();
 
-        if (!isset($this->postData()['mainCategory']) ||
-            !isset($this->postData()['withCategory'])
+        if (!isset($this->postData()['calculateMain']) ||
+            !isset($this->postData()['calculateWith'])
         ) {
             $this->addResponse('Please provide main and with categories', 1);
 
             return false;
         }
 
-        $this->categoriesPackage->calculateCategoriesPercentDiff($this->postData()['mainCategory'], $this->postData()['withCategory']);
+        $this->categoriesPackage->calculateCategoriesPercentDiff($this->postData()['calculateMain'], $this->postData()['calculateWith']);
 
         $this->addResponse(
             $this->categoriesPackage->packagesData->responseMessage,
